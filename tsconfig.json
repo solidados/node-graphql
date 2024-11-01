@@ -1,11 +1,15 @@
 {
   "extends": "fastify-tsconfig",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "noImplicitAny": false,
     "noUnusedLocals": false,
     "outDir": "dist",
     "sourceMap": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "NodeNext",
     "module": "NodeNext"
   },
   "include": ["src/**/*.ts"]
