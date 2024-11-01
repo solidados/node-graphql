@@ -1,5 +1,5 @@
 import { GraphQLBoolean, GraphQLInt, GraphQLObjectType } from 'graphql/type/index.js';
-import { UUIDType } from '../../types/uuid.js';
+import { UUIDType } from '@/routes/graphql/types/uuid.js';
 
 const profileObjectType = new GraphQLObjectType({
   name: 'Profile',

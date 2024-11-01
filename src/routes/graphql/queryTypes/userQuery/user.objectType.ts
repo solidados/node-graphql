@@ -4,7 +4,7 @@ import {
   GraphQLObjectType,
   GraphQLString,
 } from 'graphql/type/index.js';
-import { UUIDType } from '../../types/uuid.js';
+import { UUIDType } from '@/routes/graphql/types/uuid.js';
 
 const userObjectType = new GraphQLObjectType({
   name: 'User',
