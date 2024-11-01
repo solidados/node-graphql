@@ -36,3 +36,5 @@ const userObjectType = new GraphQLObjectType({
   userSubscribedTo: [User!]!
   subscribedToUser: [User!]!
 }*/
+
+export default userObjectType;
