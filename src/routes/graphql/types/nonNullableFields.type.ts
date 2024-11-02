@@ -12,6 +12,7 @@ import { memberTypeIdEnum } from '@/routes/graphql/queryTypes/memberQuery/member
 import { createUserObjectType } from '@/routes/graphql/mutations/userIMutations/create/createUserObject.type.js';
 import { patchUserObjectType } from '@/routes/graphql/mutations/userIMutations/patch/patchUserObject.type.js';
 import { createProfileObjectType } from '@/routes/graphql/mutations/profileMutations/create/createProfileObject.type.js';
+import { patchProfileObjectType } from '@/routes/graphql/mutations/profileMutations/patch/patchProfileObject.type.js';
 
 const nonNullableGraphQLInt: GraphQLNonNull<GraphQLScalarType<number, number>> =
   new GraphQLNonNull(GraphQLInt);
@@ -33,12 +34,13 @@ const nonNullableMemberEnumType: GraphQLNonNull<GraphQLEnumType> = new GraphQLNo
 
 const nonNullableCreateUserObjectType: GraphQLNonNull<GraphQLInputObjectType> =
   new GraphQLNonNull(createUserObjectType);
-
 const nonNullablePatchUserObjectType: GraphQLNonNull<GraphQLInputObjectType> =
   new GraphQLNonNull(patchUserObjectType);
 
 const nonNullableCreateProfileObjectType: GraphQLNonNull<GraphQLInputObjectType> =
   new GraphQLNonNull(createProfileObjectType);
+const nonNullablePatchProfileObjectType: GraphQLNonNull<GraphQLInputObjectType> =
+  new GraphQLNonNull(patchProfileObjectType);
 
 export {
   nonNullableGraphQLInt,
@@ -49,4 +51,5 @@ export {
   nonNullableCreateUserObjectType,
   nonNullablePatchUserObjectType,
   nonNullableCreateProfileObjectType,
+  nonNullablePatchProfileObjectType,
 };
