@@ -1,6 +1,6 @@
-import { GraphQLObjectType, GraphQLSchema } from 'graphql/type/index.js';
+import { GraphQLObjectType, GraphQLSchema } from 'graphql';
 
-const queryType: GraphQLObjectType<string, typeof Object> = new GraphQLObjectType({
+const queryType: GraphQLObjectType = new GraphQLObjectType({
   name: 'Query',
   fields: {},
 });
