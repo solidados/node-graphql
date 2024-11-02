@@ -12,7 +12,7 @@ const queryFields = {
 };
 
 const queryTypes = new GraphQLObjectType({
-  name: 'Query Fields',
+  name: 'Query',
   fields: () => queryFields,
 });
 
