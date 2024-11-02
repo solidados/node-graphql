@@ -4,8 +4,11 @@ import {
   nonNullableGraphQLFloat,
   nonNullableGraphQLInt,
 } from '@/routes/graphql/types/nonNullableFields.type.js';
+import profileObjectType from '@/routes/graphql/queryTypes/profileQuery/profile.objectType.js';
+import { MemberType } from '@prisma/client';
+import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
 
-const memberObjectType = new GraphQLObjectType({
+const memberObjectType: GraphQLObjectType = new GraphQLObjectType({
   name: 'Member',
   description: 'Member Type',
   fields: () => ({
@@ -15,11 +18,19 @@ const memberObjectType = new GraphQLObjectType({
     },
     discount: {
       type: nonNullableGraphQLFloat,
-      description: 'Price Discount Amount',
+      description: 'Discount',
     },
     postsLimitPerMonth: {
       type: nonNullableGraphQLInt,
       description: 'Posts Monthly Limit Amount',
+    },
+    profiles: {
+      type: profileObjectType,
+      description: 'Member Profiles',
+      resolve: async (source: MemberType, _: unknown, context: PrismaContextInterface) =>
+        await context.prisma.profile.findMany({
+          where: { memberTypeId: source.id },
+        }),
     },
   }),
 });
