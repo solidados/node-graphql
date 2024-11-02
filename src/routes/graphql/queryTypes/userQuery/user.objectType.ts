@@ -7,7 +7,7 @@ import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.int
 import postCollectionType from '@/routes/graphql/queryTypes/postQuery/post.collectionType.js';
 import { UserSubscriptionInterface } from '@/routes/graphql/types/prismaSource.interface.js';
 
-const userObjectType = new GraphQLObjectType({
+const userObjectType: GraphQLObjectType = new GraphQLObjectType({
   name: 'User',
   description: 'User Type',
   fields: () => ({
