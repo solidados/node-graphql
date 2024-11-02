@@ -9,7 +9,11 @@ const createProfile = {
     args: {
       dto: { type: nonNullableCreateProfileObjectType },
     },
-    resolve: async (args: CreateProfileInterface, context: PrismaContextInterface) =>
+    resolve: async (
+      _: unknown,
+      args: CreateProfileInterface,
+      context: PrismaContextInterface,
+    ) =>
       context.prisma.profile.create({
         data: args.dto,
       }),

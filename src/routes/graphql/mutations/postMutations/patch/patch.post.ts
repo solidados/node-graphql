@@ -13,7 +13,11 @@ const patchPost = {
       id: { type: nonNullableUUIDType },
       dto: { type: nonNullablePatchPostObjectType },
     },
-    resolve: async (args: PatchPostInterface, context: PrismaContextInterface) =>
+    resolve: async (
+      _: unknown,
+      args: PatchPostInterface,
+      context: PrismaContextInterface,
+    ) =>
       await context.prisma.post.update({
         where: { id: args.id },
         data: args.dto,

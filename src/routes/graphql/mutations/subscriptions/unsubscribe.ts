@@ -10,7 +10,11 @@ const unsubscribe = {
       userId: { type: nonNullableUUIDType },
       authorId: { type: nonNullableUUIDType },
     },
-    resolve: async (args: UnsubscribeInterface, context: PrismaContextInterface) => {
+    resolve: async (
+      _: unknown,
+      args: UnsubscribeInterface,
+      context: PrismaContextInterface,
+    ) => {
       await context.prisma.subscribersOnAuthors.delete({
         where: {
           subscriberId_authorId: {

@@ -10,7 +10,11 @@ const subscribe = {
       userId: { type: nonNullableUUIDType },
       authorId: { type: nonNullableUUIDType },
     },
-    resolve: async (args: SubscribeInterface, context: PrismaContextInterface) =>
+    resolve: async (
+      _: unknown,
+      args: SubscribeInterface,
+      context: PrismaContextInterface,
+    ) =>
       await context.prisma.user.update({
         where: { id: args.userId },
         data: {

@@ -9,7 +9,11 @@ const createPost = {
     args: {
       dto: { type: nonNullableCreatePostObjectType },
     },
-    resolve: async (args: CreatePostInterface, context: PrismaContextInterface) =>
+    resolve: async (
+      _: unknown,
+      args: CreatePostInterface,
+      context: PrismaContextInterface,
+    ) =>
       await context.prisma.post.create({
         data: args.dto,
       }),

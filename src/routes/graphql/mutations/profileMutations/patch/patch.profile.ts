@@ -13,7 +13,11 @@ const patchProfile = {
       id: { type: nonNullableUUIDType },
       dto: { type: nonNullablePatchProfileObjectType },
     },
-    resolve: async (args: PatchProfileInterface, context: PrismaContextInterface) =>
+    resolve: async (
+      _: unknown,
+      args: PatchProfileInterface,
+      context: PrismaContextInterface,
+    ) =>
       await context.prisma.profile.update({
         where: { id: args.id },
         data: args.dto,

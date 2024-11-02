@@ -8,7 +8,11 @@ const deleteUser = {
     args: {
       id: { type: nonNullableUUIDType },
     },
-    resolve: async (args: User, context: PrismaContextInterface): Promise<string> => {
+    resolve: async (
+      _: unknown,
+      args: User,
+      context: PrismaContextInterface,
+    ): Promise<string> => {
       await context.prisma.user.delete({
         where: { id: args.id },
       });

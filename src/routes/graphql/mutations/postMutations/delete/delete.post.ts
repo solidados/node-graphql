@@ -8,7 +8,7 @@ const deletePost = {
     args: {
       id: { type: nonNullableUUIDType },
     },
-    resolve: async (args: Post, context: PrismaContextInterface) => {
+    resolve: async (_: unknown, args: Post, context: PrismaContextInterface) => {
       await context.prisma.post.delete({
         where: { id: args.id },
       });

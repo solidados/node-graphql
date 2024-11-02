@@ -8,7 +8,7 @@ const deleteProfile = {
     args: {
       id: { type: nonNullableUUIDType },
     },
-    resolve: async (args: Profile, context: PrismaContextInterface) => {
+    resolve: async (_: unknown, args: Profile, context: PrismaContextInterface) => {
       await context.prisma.profile.delete({
         where: { id: args.id },
       });
