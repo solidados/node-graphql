@@ -11,6 +11,7 @@ import { GraphQLEnumType } from 'graphql/type/index.js';
 import { memberTypeIdEnum } from '@/routes/graphql/queryTypes/memberQuery/member.typeIdEnum.js';
 import { createUserObjectType } from '@/routes/graphql/mutations/userIMutations/create/createUserObject.type.js';
 import { patchUserObjectType } from '@/routes/graphql/mutations/userIMutations/patch/patchUserObject.type.js';
+import { createProfileObjectType } from '@/routes/graphql/mutations/profileMutations/create/createProfileObject.type.js';
 
 const nonNullableGraphQLInt: GraphQLNonNull<GraphQLScalarType<number, number>> =
   new GraphQLNonNull(GraphQLInt);
@@ -36,6 +37,9 @@ const nonNullableCreateUserObjectType: GraphQLNonNull<GraphQLInputObjectType> =
 const nonNullablePatchUserObjectType: GraphQLNonNull<GraphQLInputObjectType> =
   new GraphQLNonNull(patchUserObjectType);
 
+const nonNullableCreateProfileObjectType: GraphQLNonNull<GraphQLInputObjectType> =
+  new GraphQLNonNull(createProfileObjectType);
+
 export {
   nonNullableGraphQLInt,
   nonNullableGraphQLFloat,
@@ -44,4 +48,5 @@ export {
   nonNullableMemberEnumType,
   nonNullableCreateUserObjectType,
   nonNullablePatchUserObjectType,
+  nonNullableCreateProfileObjectType,
 };
