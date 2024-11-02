@@ -14,6 +14,7 @@ import { patchUserObjectType } from '@/routes/graphql/mutations/userIMutations/p
 import { createProfileObjectType } from '@/routes/graphql/mutations/profileMutations/create/createProfileObject.type.js';
 import { patchProfileObjectType } from '@/routes/graphql/mutations/profileMutations/patch/patchProfileObject.type.js';
 import { createPostObjectType } from '@/routes/graphql/mutations/postMutations/create/createPostObject.type.js';
+import patchPostObjectType from '@/routes/graphql/mutations/postMutations/patch/patchPostObject.type.js';
 
 const nonNullableGraphQLInt: GraphQLNonNull<GraphQLScalarType<number, number>> =
   new GraphQLNonNull(GraphQLInt);
@@ -33,18 +34,23 @@ const nonNullableMemberEnumType: GraphQLNonNull<GraphQLEnumType> = new GraphQLNo
   memberTypeIdEnum,
 );
 
+// User Mutations
 const nonNullableCreateUserObjectType: GraphQLNonNull<GraphQLInputObjectType> =
   new GraphQLNonNull(createUserObjectType);
 const nonNullablePatchUserObjectType: GraphQLNonNull<GraphQLInputObjectType> =
   new GraphQLNonNull(patchUserObjectType);
 
+// Profile Mutations
 const nonNullableCreateProfileObjectType: GraphQLNonNull<GraphQLInputObjectType> =
   new GraphQLNonNull(createProfileObjectType);
 const nonNullablePatchProfileObjectType: GraphQLNonNull<GraphQLInputObjectType> =
   new GraphQLNonNull(patchProfileObjectType);
 
+// Post Mutations
 const nonNullableCreatePostObjectType: GraphQLNonNull<GraphQLInputObjectType> =
   new GraphQLNonNull(createPostObjectType);
+const nonNullablePatchPostObjectType: GraphQLNonNull<GraphQLInputObjectType> =
+  new GraphQLNonNull(patchPostObjectType);
 
 export {
   nonNullableGraphQLInt,
@@ -57,4 +63,5 @@ export {
   nonNullableCreateProfileObjectType,
   nonNullablePatchProfileObjectType,
   nonNullableCreatePostObjectType,
+  nonNullablePatchPostObjectType,
 };
