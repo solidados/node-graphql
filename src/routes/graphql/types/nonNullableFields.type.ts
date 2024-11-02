@@ -13,6 +13,7 @@ import { createUserObjectType } from '@/routes/graphql/mutations/userIMutations/
 import { patchUserObjectType } from '@/routes/graphql/mutations/userIMutations/patch/patchUserObject.type.js';
 import { createProfileObjectType } from '@/routes/graphql/mutations/profileMutations/create/createProfileObject.type.js';
 import { patchProfileObjectType } from '@/routes/graphql/mutations/profileMutations/patch/patchProfileObject.type.js';
+import { createPostObjectType } from '@/routes/graphql/mutations/postMutations/create/createPostObject.type.js';
 
 const nonNullableGraphQLInt: GraphQLNonNull<GraphQLScalarType<number, number>> =
   new GraphQLNonNull(GraphQLInt);
@@ -42,6 +43,9 @@ const nonNullableCreateProfileObjectType: GraphQLNonNull<GraphQLInputObjectType>
 const nonNullablePatchProfileObjectType: GraphQLNonNull<GraphQLInputObjectType> =
   new GraphQLNonNull(patchProfileObjectType);
 
+const nonNullableCreatePostObjectType: GraphQLNonNull<GraphQLInputObjectType> =
+  new GraphQLNonNull(createPostObjectType);
+
 export {
   nonNullableGraphQLInt,
   nonNullableGraphQLFloat,
@@ -52,4 +56,5 @@ export {
   nonNullablePatchUserObjectType,
   nonNullableCreateProfileObjectType,
   nonNullablePatchProfileObjectType,
+  nonNullableCreatePostObjectType,
 };
