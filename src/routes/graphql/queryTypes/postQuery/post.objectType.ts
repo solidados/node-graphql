@@ -1,4 +1,4 @@
-import { GraphQLNonNull, GraphQLObjectType, GraphQLString } from 'graphql/type/index.js';
+import { GraphQLObjectType } from 'graphql/type/index.js';
 import { UUIDType } from '@/routes/graphql/types/uuid.js';
 
 const postObjectType = new GraphQLObjectType({
@@ -10,11 +10,11 @@ const postObjectType = new GraphQLObjectType({
       description: 'Post ID',
     },
     title: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: UUIDType,
       description: 'Post Title',
     },
     content: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: UUIDType,
       description: 'Post Content',
     },
   }),

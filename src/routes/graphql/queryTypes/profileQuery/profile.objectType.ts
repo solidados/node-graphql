@@ -1,5 +1,9 @@
-import { GraphQLBoolean, GraphQLInt, GraphQLObjectType } from 'graphql/type/index.js';
+import { GraphQLObjectType } from 'graphql/type/index.js';
 import { UUIDType } from '@/routes/graphql/types/uuid.js';
+import {
+  nonNullableGraphQLBoolean,
+  nonNullableGraphQLInt,
+} from '@/routes/graphql/types/nonNullableFields.type.js';
 
 const profileObjectType = new GraphQLObjectType({
   name: 'Profile',
@@ -10,11 +14,11 @@ const profileObjectType = new GraphQLObjectType({
       description: 'Profile ID',
     },
     isMale: {
-      type: GraphQLBoolean,
+      type: nonNullableGraphQLBoolean,
       description: 'Gender',
     },
     yearOfBirth: {
-      type: GraphQLInt,
+      type: nonNullableGraphQLInt,
       description: 'Year Of Birth',
     },
     // TODO: add MemberType

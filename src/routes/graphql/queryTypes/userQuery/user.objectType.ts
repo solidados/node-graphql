@@ -1,10 +1,6 @@
-import {
-  GraphQLFloat,
-  GraphQLNonNull,
-  GraphQLObjectType,
-  GraphQLString,
-} from 'graphql/type/index.js';
+import { GraphQLObjectType } from 'graphql/type/index.js';
 import { UUIDType } from '@/routes/graphql/types/uuid.js';
+import { nonNullableGraphQLFloat } from '@/routes/graphql/types/nonNullableFields.type.js';
 
 const userObjectType = new GraphQLObjectType({
   name: 'User',
@@ -15,11 +11,11 @@ const userObjectType = new GraphQLObjectType({
       description: 'User ID',
     },
     name: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: UUIDType,
       description: 'User Name',
     },
     balance: {
-      type: new GraphQLNonNull(GraphQLFloat),
+      type: nonNullableGraphQLFloat,
       description: 'User balance',
     },
     // TODO: add types for profile, posts, subscriptions, according to type User:

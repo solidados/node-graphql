@@ -1,20 +1,24 @@
-import { GraphQLFloat, GraphQLInt, GraphQLObjectType } from 'graphql/type/index.js';
-import { UUIDType } from '@/routes/graphql/types/uuid.js';
+import { GraphQLObjectType } from 'graphql/type/index.js';
+import { memberTypeIdEnum } from '@/routes/graphql/queryTypes/memberQuery/member.typeIdEnum.js';
+import {
+  nonNullableGraphQLFloat,
+  nonNullableGraphQLInt,
+} from '@/routes/graphql/types/nonNullableFields.type.js';
 
 const memberObjectType = new GraphQLObjectType({
   name: 'Member',
   description: 'Member Type',
   fields: () => ({
     id: {
-      type: UUIDType,
+      type: memberTypeIdEnum,
       description: 'Member Type ID',
     },
     discount: {
-      type: GraphQLFloat,
+      type: nonNullableGraphQLFloat,
       description: 'Price Discount Amount',
     },
     postsLimitPerMonth: {
-      type: GraphQLInt,
+      type: nonNullableGraphQLInt,
       description: 'Posts Monthly Limit Amount',
     },
   }),
