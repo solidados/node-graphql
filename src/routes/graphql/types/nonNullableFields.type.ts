@@ -8,13 +8,13 @@ import {
 } from 'graphql';
 import { UUIDType } from './uuid.js';
 import { GraphQLEnumType } from 'graphql/type/index.js';
-import { memberTypeIdEnum } from '@/routes/graphql/queryTypes/memberQuery/member.typeIdEnum.js';
-import { createUserObjectType } from '@/routes/graphql/mutations/userMutations/create/createUserObject.type.js';
-import { patchUserObjectType } from '@/routes/graphql/mutations/userMutations/patch/patchUserObject.type.js';
-import { createProfileObjectType } from '@/routes/graphql/mutations/profileMutations/create/createProfileObject.type.js';
-import { patchProfileObjectType } from '@/routes/graphql/mutations/profileMutations/patch/patchProfileObject.type.js';
-import { createPostObjectType } from '@/routes/graphql/mutations/postMutations/create/createPostObject.type.js';
-import patchPostObjectType from '@/routes/graphql/mutations/postMutations/patch/patchPostObject.type.js';
+import { memberTypeIdEnum } from '../queryTypes/memberQuery/member.typeIdEnum.js';
+import { createUserObjectType } from '../mutations/userMutations/create/createUserObject.type.js';
+import { patchUserObjectType } from '../mutations/userMutations/patch/patchUserObject.type.js';
+import { createProfileObjectType } from '../mutations/profileMutations/create/createProfileObject.type.js';
+import { patchProfileObjectType } from '../mutations/profileMutations/patch/patchProfileObject.type.js';
+import { createPostObjectType } from '../mutations/postMutations/create/createPostObject.type.js';
+import patchPostObjectType from '../mutations/postMutations/patch/patchPostObject.type.js';
 
 const nonNullableGraphQLInt: GraphQLNonNull<GraphQLScalarType<number, number>> =
   new GraphQLNonNull(GraphQLInt);

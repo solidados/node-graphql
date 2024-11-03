@@ -1,10 +1,10 @@
-import postObjectType from '@/routes/graphql/queryTypes/postQuery/post.objectType.js';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
-import { PatchPostInterface } from '@/routes/graphql/mutations/postMutations/patch/patchPost.interface.js';
+import postObjectType from '../../../queryTypes/postQuery/post.objectType.js';
+import { PrismaContextInterface } from '../../../types/prismaContext.interface.js';
 import {
   nonNullablePatchPostObjectType,
   nonNullableUUIDType,
-} from '@/routes/graphql/types/nonNullableFields.type.js';
+} from '../../../types/nonNullableFields.type.js';
+import { PatchPostInterface } from './patchPost.interface.js';
 
 const patchPost = {
   type: postObjectType,

@@ -1,10 +1,10 @@
-import userObjectType from '@/routes/graphql/queryTypes/userQuery/user.objectType.js';
+import userObjectType from '../../../queryTypes/userQuery/user.objectType.js';
 import {
   nonNullablePatchUserObjectType,
   nonNullableUUIDType,
-} from '@/routes/graphql/types/nonNullableFields.type.js';
-import { PatchUserInterface } from '@/routes/graphql/mutations/userMutations/patch/patchUser.interface.js';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
+} from '../../../types/nonNullableFields.type.js';
+import { PatchUserInterface } from './patchUser.interface.js';
+import { PrismaContextInterface } from '../../../types/prismaContext.interface.js';
 
 const patchUser = {
   type: userObjectType,

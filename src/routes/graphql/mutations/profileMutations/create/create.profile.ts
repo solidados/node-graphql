@@ -1,7 +1,7 @@
-import profileObjectType from '@/routes/graphql/queryTypes/profileQuery/profile.objectType.js';
-import { nonNullableCreateProfileObjectType } from '@/routes/graphql/types/nonNullableFields.type.js';
-import { CreateProfileInterface } from '@/routes/graphql/mutations/profileMutations/create/createProfile.interface.js';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
+import profileObjectType from '../../../queryTypes/profileQuery/profile.objectType.js';
+import { nonNullableCreateProfileObjectType } from '../../../types/nonNullableFields.type.js';
+import { CreateProfileInterface } from './createProfile.interface.js';
+import { PrismaContextInterface } from '../../../types/prismaContext.interface.js';
 
 const createProfile = {
   type: profileObjectType,

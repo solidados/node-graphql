@@ -4,7 +4,7 @@ import {
   nonNullableGraphQLInt,
   nonNullableMemberEnumType,
   nonNullableUUIDType,
-} from '@/routes/graphql/types/nonNullableFields.type.js';
+} from '../../../types/nonNullableFields.type.js';
 
 export const createProfileObjectType: GraphQLInputObjectType = new GraphQLInputObjectType(
   {

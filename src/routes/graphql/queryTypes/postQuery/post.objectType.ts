@@ -1,8 +1,8 @@
 import { GraphQLObjectType } from 'graphql/type/index.js';
-import { UUIDType } from '@/routes/graphql/types/uuid.js';
-import userObjectType from '@/routes/graphql/queryTypes/userQuery/user.objectType.js';
 import { Post } from '@prisma/client';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
+import { UUIDType } from '../../types/uuid.js';
+import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
+import userObjectType from '../../queryTypes/userQuery/user.objectType.js';
 
 const postObjectType: GraphQLObjectType = new GraphQLObjectType({
   name: 'Post',

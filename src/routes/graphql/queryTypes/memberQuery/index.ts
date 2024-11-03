@@ -1,8 +1,8 @@
-import memberObjectType from '@/routes/graphql/queryTypes/memberQuery/member.objectType.js';
-import { nonNullableMemberEnumType } from '@/routes/graphql/types/nonNullableFields.type.js';
 import { MemberType } from '@prisma/client';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
-import memberCollectionType from '@/routes/graphql/queryTypes/memberQuery/member.collectionType.js';
+import memberObjectType from '../../queryTypes/memberQuery/member.objectType.js';
+import memberCollectionType from '../../queryTypes/memberQuery/member.collectionType.js';
+import { nonNullableMemberEnumType } from '../../types/nonNullableFields.type.js';
+import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
 
 export const memberQuery = {
   memberType: {

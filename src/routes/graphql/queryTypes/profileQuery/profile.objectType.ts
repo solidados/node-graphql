@@ -1,14 +1,14 @@
+import { Profile } from '@prisma/client';
 import { GraphQLObjectType } from 'graphql/type/index.js';
-import { UUIDType } from '@/routes/graphql/types/uuid.js';
+import { UUIDType } from '../../types/uuid.js';
 import {
   nonNullableGraphQLBoolean,
   nonNullableGraphQLInt,
-} from '@/routes/graphql/types/nonNullableFields.type.js';
-import userObjectType from '@/routes/graphql/queryTypes/userQuery/user.objectType.js';
-import { Profile } from '@prisma/client';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
-import memberObjectType from '@/routes/graphql/queryTypes/memberQuery/member.objectType.js';
-import { memberTypeIdEnum } from '@/routes/graphql/queryTypes/memberQuery/member.typeIdEnum.js';
+} from '../../types/nonNullableFields.type.js';
+import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
+import userObjectType from '../userQuery/user.objectType.js';
+import memberObjectType from '../memberQuery/member.objectType.js';
+import { memberTypeIdEnum } from '../memberQuery/member.typeIdEnum.js';
 
 const profileObjectType: GraphQLObjectType = new GraphQLObjectType({
   name: 'Profile',

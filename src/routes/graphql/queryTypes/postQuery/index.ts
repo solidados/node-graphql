@@ -1,8 +1,8 @@
-import postObjectType from '@/routes/graphql/queryTypes/postQuery/post.objectType.js';
-import { nonNullableUUIDType } from '@/routes/graphql/types/nonNullableFields.type.js';
 import { Post } from '@prisma/client';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
-import postCollectionType from '@/routes/graphql/queryTypes/postQuery/post.collectionType.js';
+import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
+import { nonNullableUUIDType } from '../../types/nonNullableFields.type.js';
+import postObjectType from './post.objectType.js';
+import postCollectionType from './post.collectionType.js';
 
 export const postQuery = {
   post: {

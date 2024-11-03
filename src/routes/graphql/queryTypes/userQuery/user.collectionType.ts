@@ -1,5 +1,5 @@
 import { GraphQLList, GraphQLObjectType } from 'graphql/type/index.js';
-import userObjectType from '@/routes/graphql/queryTypes/userQuery/user.objectType.js';
+import userObjectType from './user.objectType.js';
 
 const userCollectionType: GraphQLList<GraphQLObjectType> = new GraphQLList(
   userObjectType,

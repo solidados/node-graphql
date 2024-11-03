@@ -1,6 +1,6 @@
-import { nonNullableUUIDType } from '@/routes/graphql/types/nonNullableFields.type.js';
 import { User } from '@prisma/client';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
+import { nonNullableUUIDType } from '../../../types/nonNullableFields.type.js';
+import { PrismaContextInterface } from '../../../types/prismaContext.interface.js';
 
 const deleteUser = {
   type: nonNullableUUIDType,

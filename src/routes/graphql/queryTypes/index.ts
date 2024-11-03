@@ -1,8 +1,8 @@
-import { userQuery } from '@/routes/graphql/queryTypes/userQuery/index.js';
-import { postQuery } from '@/routes/graphql/queryTypes/postQuery/index.js';
-import { profileQuery } from '@/routes/graphql/queryTypes/profileQuery/index.js';
-import { memberQuery } from '@/routes/graphql/queryTypes/memberQuery/index.js';
 import { GraphQLObjectType } from 'graphql/type/index.js';
+import { userQuery } from './userQuery/index.js';
+import { profileQuery } from './profileQuery/index.js';
+import { postQuery } from './postQuery/index.js';
+import { memberQuery } from './memberQuery/index.js';
 
 const queryFields = {
   ...userQuery,

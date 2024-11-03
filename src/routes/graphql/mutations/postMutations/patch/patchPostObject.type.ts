@@ -1,5 +1,5 @@
 import { GraphQLInputObjectType } from 'graphql';
-import { UUIDType } from '@/routes/graphql/types/uuid.js';
+import { UUIDType } from '../../../types/uuid.js';
 
 const patchPostObjectType: GraphQLInputObjectType = new GraphQLInputObjectType({
   name: 'UpdatePostInput',

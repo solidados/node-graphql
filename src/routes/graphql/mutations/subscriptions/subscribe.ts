@@ -1,7 +1,7 @@
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
-import { SubscribeInterface } from '@/routes/graphql/mutations/subscriptions/subscriptions.interface.js';
-import userObjectType from '@/routes/graphql/queryTypes/userQuery/user.objectType.js';
-import { nonNullableUUIDType } from '@/routes/graphql/types/nonNullableFields.type.js';
+import userObjectType from '../../queryTypes/userQuery/user.objectType.js';
+import { nonNullableUUIDType } from '../../types/nonNullableFields.type.js';
+import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
+import { SubscribeInterface } from './subscriptions.interface.js';
 
 const subscribe = {
   type: userObjectType,

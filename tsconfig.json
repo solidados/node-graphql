@@ -1,10 +1,10 @@
 {
   "extends": "fastify-tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
+    /*"baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
-    },
+      "@*//*": ["src*//*"]
+    },*/
     "noImplicitAny": false,
     "noUnusedLocals": false,
     "outDir": "dist",

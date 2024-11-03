@@ -1,10 +1,10 @@
-import profileObjectType from '@/routes/graphql/queryTypes/profileQuery/profile.objectType.js';
+import profileObjectType from '../../../queryTypes/profileQuery/profile.objectType.js';
 import {
   nonNullablePatchProfileObjectType,
   nonNullableUUIDType,
-} from '@/routes/graphql/types/nonNullableFields.type.js';
-import { PatchProfileInterface } from '@/routes/graphql/mutations/profileMutations/patch/patchProfile.interface.js';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
+} from '../../../types/nonNullableFields.type.js';
+import { PrismaContextInterface } from '../../../types/prismaContext.interface.js';
+import { PatchProfileInterface } from './patchProfile.interface.js';
 
 const patchProfile = {
   type: profileObjectType,

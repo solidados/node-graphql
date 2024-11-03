@@ -16,14 +16,14 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
   ],
-  settings: {
+  /*settings: {
     'import/resolver': {
       alias: {
         map: [['@', './src']],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
-  },
+  },*/
   overrides: [],
   rules: {
     '@typescript-eslint/no-unsafe-assignment': 0,

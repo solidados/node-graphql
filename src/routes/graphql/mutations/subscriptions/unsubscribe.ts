@@ -1,7 +1,7 @@
-import { UnsubscribeInterface } from '@/routes/graphql/mutations/subscriptions/subscriptions.interface.js';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
-import { UUIDType } from '@/routes/graphql/types/uuid.js';
-import { nonNullableUUIDType } from '@/routes/graphql/types/nonNullableFields.type.js';
+import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
+import { UUIDType } from '../../types/uuid.js';
+import { nonNullableUUIDType } from '../../types/nonNullableFields.type.js';
+import { UnsubscribeInterface } from './subscriptions.interface.js';
 
 const unsubscribe = {
   type: UUIDType,

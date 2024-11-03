@@ -1,8 +1,8 @@
-import profileObjectType from '@/routes/graphql/queryTypes/profileQuery/profile.objectType.js';
-import { nonNullableUUIDType } from '@/routes/graphql/types/nonNullableFields.type.js';
 import { Profile } from '@prisma/client';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
-import profileCollectionType from '@/routes/graphql/queryTypes/profileQuery/profile.collectionType.js';
+import profileObjectType from './profile.objectType.js';
+import profileCollectionType from './profile.collectionType.js';
+import { nonNullableUUIDType } from '../../types/nonNullableFields.type.js';
+import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
 
 export const profileQuery = {
   profile: {

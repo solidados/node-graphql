@@ -1,9 +1,9 @@
-import userObjectType from '@/routes/graphql/queryTypes/userQuery/user.objectType.js';
-import { nonNullableUUIDType } from '@/routes/graphql/types/nonNullableFields.type.js';
 import { User } from '@prisma/client';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
-import userCollectionType from '@/routes/graphql/queryTypes/userQuery/user.collectionType.js';
 import { GraphQLResolveInfo } from 'graphql/type/index.js';
+import { nonNullableUUIDType } from '../../types/nonNullableFields.type.js';
+import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
+import userObjectType from './user.objectType.js';
+import userCollectionType from './user.collectionType.js';
 import {
   FieldsByTypeName,
   parseResolveInfo,

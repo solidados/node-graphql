@@ -1,12 +1,12 @@
+import { MemberType } from '@prisma/client';
 import { GraphQLObjectType } from 'graphql/type/index.js';
-import { memberTypeIdEnum } from '@/routes/graphql/queryTypes/memberQuery/member.typeIdEnum.js';
+import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
+import profileObjectType from '../profileQuery/profile.objectType.js';
 import {
   nonNullableGraphQLFloat,
   nonNullableGraphQLInt,
-} from '@/routes/graphql/types/nonNullableFields.type.js';
-import profileObjectType from '@/routes/graphql/queryTypes/profileQuery/profile.objectType.js';
-import { MemberType } from '@prisma/client';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
+} from '../../types/nonNullableFields.type.js';
+import { memberTypeIdEnum } from './member.typeIdEnum.js';
 
 const memberObjectType: GraphQLObjectType = new GraphQLObjectType({
   name: 'Member',

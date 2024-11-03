@@ -1,11 +1,11 @@
 import { GraphQLList, GraphQLObjectType } from 'graphql/type/index.js';
-import { UUIDType } from '@/routes/graphql/types/uuid.js';
-import { nonNullableGraphQLFloat } from '@/routes/graphql/types/nonNullableFields.type.js';
-import profileObjectType from '@/routes/graphql/queryTypes/profileQuery/profile.objectType.js';
 import { Profile, User } from '@prisma/client';
-import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
-import postCollectionType from '@/routes/graphql/queryTypes/postQuery/post.collectionType.js';
-import { UserSubscriptionInterface } from '@/routes/graphql/types/prismaSource.interface.js';
+import { UUIDType } from '../../types/uuid.js';
+import { nonNullableGraphQLFloat } from '../../types/nonNullableFields.type.js';
+import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
+import { UserSubscriptionInterface } from '../../types/prismaSource.interface.js';
+import profileObjectType from '../../queryTypes/profileQuery/profile.objectType.js';
+import postCollectionType from '../../queryTypes/postQuery/post.collectionType.js';
 
 const userObjectType: GraphQLObjectType = new GraphQLObjectType({
   name: 'User',
