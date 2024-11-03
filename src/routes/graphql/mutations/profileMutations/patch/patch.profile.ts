@@ -7,22 +7,20 @@ import { PatchProfileInterface } from '@/routes/graphql/mutations/profileMutatio
 import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
 
 const patchProfile = {
-  patchProfile: {
-    type: profileObjectType,
-    args: {
-      id: { type: nonNullableUUIDType },
-      dto: { type: nonNullablePatchProfileObjectType },
-    },
-    resolve: async (
-      _: unknown,
-      args: PatchProfileInterface,
-      context: PrismaContextInterface,
-    ) =>
-      await context.prisma.profile.update({
-        where: { id: args.id },
-        data: args.dto,
-      }),
+  type: profileObjectType,
+  args: {
+    id: { type: nonNullableUUIDType },
+    dto: { type: nonNullablePatchProfileObjectType },
   },
+  resolve: async (
+    _: unknown,
+    args: PatchProfileInterface,
+    context: PrismaContextInterface,
+  ) =>
+    await context.prisma.profile.update({
+      where: { id: args.id },
+      data: args.dto,
+    }),
 };
 
 export default patchProfile;

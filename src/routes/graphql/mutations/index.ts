@@ -12,20 +12,20 @@ import unsubscribe from '@/routes/graphql/mutations/subscriptions/unsubscribe.js
 import subscribe from '@/routes/graphql/mutations/subscriptions/subscribe.js';
 
 const mutationFields = {
-  ...createUser,
-  ...patchUser,
-  ...deleteUser,
-  ...createProfile,
-  ...patchProfile,
-  ...deleteProfile,
-  ...createPost,
-  ...patchPost,
-  ...deletePost,
-  ...subscribe,
-  ...unsubscribe,
+  createUser,
+  patchUser,
+  deleteUser,
+  createProfile,
+  patchProfile,
+  deleteProfile,
+  createPost,
+  patchPost,
+  deletePost,
+  subscribe,
+  unsubscribe,
 };
 
-const mutationTypes = new GraphQLObjectType({
+const mutationTypes: GraphQLObjectType = new GraphQLObjectType({
   name: 'Mutation',
   fields: () => mutationFields,
 });

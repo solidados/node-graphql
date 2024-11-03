@@ -4,20 +4,18 @@ import { CreatePostInterface } from '@/routes/graphql/mutations/postMutations/cr
 import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
 
 const createPost = {
-  createPost: {
-    type: postObjectType,
-    args: {
-      dto: { type: nonNullableCreatePostObjectType },
-    },
-    resolve: async (
-      _: unknown,
-      args: CreatePostInterface,
-      context: PrismaContextInterface,
-    ) =>
-      await context.prisma.post.create({
-        data: args.dto,
-      }),
+  type: postObjectType,
+  args: {
+    dto: { type: nonNullableCreatePostObjectType },
   },
+  resolve: async (
+    _: unknown,
+    args: CreatePostInterface,
+    context: PrismaContextInterface,
+  ) =>
+    await context.prisma.post.create({
+      data: args.dto,
+    }),
 };
 
 export default createPost;

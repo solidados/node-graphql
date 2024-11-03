@@ -4,11 +4,9 @@ import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.int
 import { nonNullableCreateUserObjectType } from '@/routes/graphql/types/nonNullableFields.type.js';
 
 const createUser = {
-  createUser: {
-    type: userObjectType,
-    args: {
-      dto: { type: nonNullableCreateUserObjectType },
-    },
+  type: userObjectType,
+  args: {
+    dto: { type: nonNullableCreateUserObjectType },
   },
   resolve: async (
     _: unknown,

@@ -7,22 +7,20 @@ import {
 } from '@/routes/graphql/types/nonNullableFields.type.js';
 
 const patchPost = {
-  patchPost: {
-    type: postObjectType,
-    args: {
-      id: { type: nonNullableUUIDType },
-      dto: { type: nonNullablePatchPostObjectType },
-    },
-    resolve: async (
-      _: unknown,
-      args: PatchPostInterface,
-      context: PrismaContextInterface,
-    ) =>
-      await context.prisma.post.update({
-        where: { id: args.id },
-        data: args.dto,
-      }),
+  type: postObjectType,
+  args: {
+    id: { type: nonNullableUUIDType },
+    dto: { type: nonNullablePatchPostObjectType },
   },
+  resolve: async (
+    _: unknown,
+    args: PatchPostInterface,
+    context: PrismaContextInterface,
+  ) =>
+    await context.prisma.post.update({
+      where: { id: args.id },
+      data: args.dto,
+    }),
 };
 
 export default patchPost;

@@ -7,11 +7,9 @@ import { PatchUserInterface } from '@/routes/graphql/mutations/userMutations/pat
 import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
 
 const patchUser = {
-  patchUser: {
-    type: userObjectType,
-    args: { id: { type: nonNullableUUIDType } },
-    dto: { type: nonNullablePatchUserObjectType },
-  },
+  type: userObjectType,
+  args: { id: { type: nonNullableUUIDType } },
+  dto: { type: nonNullablePatchUserObjectType },
   resolve: async (
     _: unknown,
     args: PatchUserInterface,

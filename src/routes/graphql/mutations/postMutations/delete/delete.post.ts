@@ -3,17 +3,15 @@ import { Post } from '@prisma/client';
 import { PrismaContextInterface } from '@/routes/graphql/types/prismaContext.interface.js';
 
 const deletePost = {
-  deletePost: {
-    type: nonNullableUUIDType,
-    args: {
-      id: { type: nonNullableUUIDType },
-    },
-    resolve: async (_: unknown, args: Post, context: PrismaContextInterface) => {
-      await context.prisma.post.delete({
-        where: { id: args.id },
-      });
-      return args.id;
-    },
+  type: nonNullableUUIDType,
+  args: {
+    id: { type: nonNullableUUIDType },
+  },
+  resolve: async (_: unknown, args: Post, context: PrismaContextInterface) => {
+    await context.prisma.post.delete({
+      where: { id: args.id },
+    });
+    return args.id;
   },
 };
 
