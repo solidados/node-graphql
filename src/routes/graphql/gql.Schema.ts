@@ -1,6 +1,6 @@
 import { GraphQLSchema } from 'graphql';
-import queryTypes from './queryTypes/index.js';
-import mutationTypes from './mutations/index.js';
+import queryTypes from './queryTypes/queryBarrel.js';
+import mutationTypes from './mutations/mutationBarrel.js';
 
 const graphQLSchema = new GraphQLSchema({
   query: queryTypes,

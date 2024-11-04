@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import * as loaders from './index.js';
+import * as loaders from './loadersBarrel.js';
 
 const loadersController = (prisma: PrismaClient) => ({
   userLoader: loaders.userLoader(prisma),

@@ -1,8 +1,8 @@
 import { GraphQLObjectType } from 'graphql/type/index.js';
-import { userQuery } from './userQuery/index.js';
-import { profileQuery } from './profileQuery/index.js';
-import { postQuery } from './postQuery/index.js';
-import { memberQuery } from './memberQuery/index.js';
+import { userQuery } from './userQuery/userQueryBarrel.js';
+import { profileQuery } from './profileQuery/profileQueryBarrel.js';
+import { postQuery } from './postQuery/postQueryBarrel.js';
+import { memberQuery } from './memberQuery/memberQueryBarrel.js';
 
 const queryFields = {
   ...userQuery,
