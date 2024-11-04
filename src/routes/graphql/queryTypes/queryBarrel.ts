@@ -5,15 +5,15 @@ import { postQuery } from './postQuery/postQueryBarrel.js';
 import { memberQuery } from './memberQuery/memberQueryBarrel.js';
 
 const queryFields = {
-  ...userQuery,
-  ...profileQuery,
-  ...postQuery,
-  ...memberQuery,
+  userQuery,
+  profileQuery,
+  postQuery,
+  memberQuery,
 };
 
 const queryTypes = new GraphQLObjectType({
   name: 'Query',
-  fields: () => queryFields,
+  fields: queryFields,
 });
 
 export default queryTypes;

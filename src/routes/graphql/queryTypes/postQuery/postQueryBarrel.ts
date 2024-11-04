@@ -5,16 +5,14 @@ import postObjectType from './post.objectType.js';
 import postCollectionType from './post.collectionType.js';
 
 export const postQuery = {
-  post: {
-    type: postObjectType,
-    args: {
-      id: { type: nonNullableUUIDType },
-    },
-    resolve: async (_: unknown, args: Post, context: PrismaContextInterface) =>
-      await context.prisma.post.findUnique({
-        where: { id: args.id },
-      }),
+  type: postObjectType,
+  args: {
+    id: { type: nonNullableUUIDType },
   },
+  resolve: async (_: unknown, args: Post, context: PrismaContextInterface) =>
+    await context.prisma.post.findUnique({
+      where: { id: args.id },
+    }),
   posts: {
     type: postCollectionType,
     resolve: async (context: PrismaContextInterface) =>

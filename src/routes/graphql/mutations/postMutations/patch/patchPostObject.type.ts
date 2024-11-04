@@ -1,11 +1,11 @@
-import { GraphQLInputObjectType } from 'graphql';
-import { UUIDType } from '../../../types/uuid.js';
+import { GraphQLInputObjectType, GraphQLString } from 'graphql';
+// import { UUIDType } from '../../../types/uuid.js';
 
 const patchPostObjectType: GraphQLInputObjectType = new GraphQLInputObjectType({
   name: 'UpdatePostInput',
   fields: () => ({
-    title: { type: UUIDType },
-    content: { type: UUIDType },
+    title: { type: GraphQLString },
+    content: { type: GraphQLString },
   }),
 });
 

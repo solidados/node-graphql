@@ -5,6 +5,7 @@ import {
   GraphQLScalarType,
   GraphQLNonNull,
   GraphQLInputObjectType,
+  GraphQLString,
 } from 'graphql';
 import { UUIDType } from './uuid.js';
 import { GraphQLEnumType } from 'graphql/type/index.js';
@@ -22,7 +23,8 @@ const nonNullableGraphQLInt: GraphQLNonNull<GraphQLScalarType<number, number>> =
 const nonNullableGraphQLFloat: GraphQLNonNull<GraphQLScalarType<number, number>> =
   new GraphQLNonNull(GraphQLFloat);
 
-/*const nonNullableGraphQLString = new GraphQLNonNull(GraphQLString);*/
+const nonNullableGraphQLString: GraphQLNonNull<GraphQLScalarType<string>> =
+  new GraphQLNonNull(GraphQLString);
 
 const nonNullableGraphQLBoolean: GraphQLNonNull<GraphQLScalarType<boolean, boolean>> =
   new GraphQLNonNull(GraphQLBoolean);
@@ -55,6 +57,7 @@ const nonNullablePatchPostObjectType: GraphQLNonNull<GraphQLInputObjectType> =
 export {
   nonNullableGraphQLInt,
   nonNullableGraphQLFloat,
+  nonNullableGraphQLString,
   nonNullableGraphQLBoolean,
   nonNullableUUIDType,
   nonNullableMemberEnumType,

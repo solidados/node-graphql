@@ -5,16 +5,14 @@ import { nonNullableUUIDType } from '../../types/nonNullableFields.type.js';
 import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
 
 export const profileQuery = {
-  profile: {
-    type: profileObjectType,
-    args: {
-      id: { type: nonNullableUUIDType },
-    },
-    resolve: async (_: unknown, args: Profile, context: PrismaContextInterface) =>
-      await context.prisma.profile.findUnique({
-        where: { id: args.id },
-      }),
+  type: profileObjectType,
+  args: {
+    id: { type: nonNullableUUIDType },
   },
+  resolve: async (_: unknown, args: Profile, context: PrismaContextInterface) =>
+    await context.prisma.profile.findUnique({
+      where: { id: args.id },
+    }),
   profiles: {
     type: profileCollectionType,
     resolve: async (context: PrismaContextInterface) =>

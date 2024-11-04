@@ -3,6 +3,7 @@ import { Post } from '@prisma/client';
 import { UUIDType } from '../../types/uuid.js';
 import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
 import userObjectType from '../../queryTypes/userQuery/user.objectType.js';
+import { nonNullableGraphQLString } from '../../types/nonNullableFields.type.js';
 
 const postObjectType: GraphQLObjectType = new GraphQLObjectType({
   name: 'Post',
@@ -13,11 +14,11 @@ const postObjectType: GraphQLObjectType = new GraphQLObjectType({
       description: 'Post ID',
     },
     title: {
-      type: UUIDType,
+      type: nonNullableGraphQLString,
       description: 'Post Title',
     },
     content: {
-      type: UUIDType,
+      type: nonNullableGraphQLString,
       description: 'Post Content',
     },
     author: {

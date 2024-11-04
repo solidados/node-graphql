@@ -5,17 +5,15 @@ import { nonNullableMemberEnumType } from '../../types/nonNullableFields.type.js
 import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
 
 export const memberQuery = {
-  memberType: {
-    type: memberObjectType,
-    description: 'Member Type',
-    args: {
-      id: { type: nonNullableMemberEnumType },
-    },
-    resolve: async (_: unknown, args: MemberType, context: PrismaContextInterface) =>
-      await context.prisma.memberType.findUnique({
-        where: { id: args.id },
-      }),
+  type: memberObjectType,
+  description: 'Member Type',
+  args: {
+    id: { type: nonNullableMemberEnumType },
   },
+  resolve: async (_: unknown, args: MemberType, context: PrismaContextInterface) =>
+    await context.prisma.memberType.findUnique({
+      where: { id: args.id },
+    }),
   memberTypes: {
     type: memberCollectionType,
     description: 'Members Types',

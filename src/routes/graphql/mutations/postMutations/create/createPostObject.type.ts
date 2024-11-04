@@ -1,11 +1,14 @@
 import { GraphQLInputObjectType } from 'graphql';
-import { nonNullableUUIDType } from '../../../types/nonNullableFields.type.js';
+import {
+  nonNullableGraphQLString,
+  nonNullableUUIDType,
+} from '../../../types/nonNullableFields.type.js';
 
 export const createPostObjectType: GraphQLInputObjectType = new GraphQLInputObjectType({
   name: 'CreatePostInput',
   fields: () => ({
-    title: { type: nonNullableUUIDType },
-    content: { type: nonNullableUUIDType },
+    title: { type: nonNullableGraphQLString },
+    content: { type: nonNullableGraphQLString },
     authorId: { type: nonNullableUUIDType },
   }),
 });

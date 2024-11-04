@@ -1,7 +1,10 @@
 import { GraphQLList, GraphQLObjectType } from 'graphql/type/index.js';
 import { Profile, User } from '@prisma/client';
 import { UUIDType } from '../../types/uuid.js';
-import { nonNullableGraphQLFloat } from '../../types/nonNullableFields.type.js';
+import {
+  nonNullableGraphQLFloat,
+  nonNullableGraphQLString,
+} from '../../types/nonNullableFields.type.js';
 import { PrismaContextInterface } from '../../types/prismaContext.interface.js';
 import { UserSubscriptionInterface } from '../../types/prismaSource.interface.js';
 import profileObjectType from '../../queryTypes/profileQuery/profile.objectType.js';
@@ -16,7 +19,7 @@ const userObjectType: GraphQLObjectType = new GraphQLObjectType({
       description: 'User ID',
     },
     name: {
-      type: UUIDType,
+      type: nonNullableGraphQLString,
       description: 'User Name',
     },
     balance: {
